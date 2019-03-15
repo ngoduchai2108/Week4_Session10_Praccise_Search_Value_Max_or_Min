@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Max or Min</title>
+</head>
+<body>
+<script>
+    function searchMin(array) {
+        let min = array[0];
+        let index = 0;
+        for (let i=1; i<array.length;i++){
+            if (array[i] < min){
+                min = array[i];
+                index = i;
+            }
+        }
+        return [min,index];
+    }
+    // tao mang gom 100 so nguyen duong ngau nhien nho hon 100;
+    let arr = [];
+    for (let i=0;i<100;i++){
+        arr[i] = Math.floor(Math.random()*101);
+    }
+    let minArray = searchMin(arr);
+    // in ra mang
+    document.write(arr+'<br/>');
+    document.write('In Array has element min is: '+ minArray[0]+'<br/>');
+    document.write('Index of Element min is : '+ minArray[1])+'<br/>';
+</script>
+</body>
+</html>
